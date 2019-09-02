@@ -23,7 +23,8 @@ func (c col) RGBA() (uint32, uint32, uint32, uint32) {
 
 func main() {
 	rootCmd := &cobra.Command{
-		Args: cobra.ExactArgs(1),
+		Short: "splitrgb",
+		Args:  cobra.ExactArgs(1),
 		Run: func(cmd *cobra.Command, args []string) {
 			filename := args[0]
 			img, err := readImage(filename)
